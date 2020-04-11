@@ -15,7 +15,6 @@ Using the flask web server, load the HTML form contained in the variable main_pa
 The user should then be able to enter a number and click Calculate at which time the browser will submit
 an HTTP POST to the web server. The web server will then capture the post, extract the number entered
 and display the number multiplied by 5 on the browser.
-Hint: The HTML in main_page needs a modification in the text input
 '''
 
 from flask import Flask, request
