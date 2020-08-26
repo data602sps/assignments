@@ -2,6 +2,7 @@ import math
 import unittest
 
 
+
 def exercise_example():
     # Create a variable y and set it to 5.
 
