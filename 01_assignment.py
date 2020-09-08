@@ -21,7 +21,7 @@ def exercise01():
    x = 5
    # ------ Place code above here /\ /\ /\ ------
 
-    return x
+   return x
 
 
 def exercise02():
@@ -100,7 +100,7 @@ def exercise08():
 
     # ------ Place code below here \/ \/ \/ ------
     quantity = 5
-    hello = “hello"
+    hello ="hello"
     hello_repeated = 5 * hello
 
     # ------ Place code above here /\ /\ /\ ------
