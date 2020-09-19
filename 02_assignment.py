@@ -1,11 +1,11 @@
 '''
 Assignment #2
 1. Add / modify code ONLY between the marked areas (i.e. "Place code below")
-2. Run the associated test harness for a basic check on completeness. A successful run of the test cases does not 
+2. Run the associated test harness for a basic check on completeness. A successful run of the test cases does not
     guarantee accuracy or fulfillment of the requirements. Please do not submit your work if test cases fail.
 3. To run unit tests simply use the below command after filling in all of the code:
     python 07_assignment.py
-  
+
 4. Unless explicitly stated, please do not import any additional libraries but feel free to use built-in Python packages
 5. Submissions must be a Python file and not a notebook file (i.e *.ipynb)
 6. Do not use global variables unless stated to do so
@@ -44,7 +44,7 @@ def exercise03():
     # Programmatically reorganize the countdown list below in descending order and return the value of the 5th element in the sorted countdown list.
     # The 5th element will be stored in the variable the_fifth_element, which currently below has a dummy value of -999.
     # Remember, the index number of the 5th element is not 5
-    
+
     countdown = [9, 8, 7, 5, 4, 2, 1, 6, 10, 3, 0, -5]
     the_fifth_element = -999
 
@@ -105,18 +105,22 @@ def exercise07(n):
 
     # ------ Place code below here \/ \/ \/ ------
 
+    pass # Remove this line
 
     # ------ Place code above here /\ /\ /\ ------
 
 
-# ------ Place code below here \/ \/ \/ ------
 
 def exercise08(s):
     # This function receives a string. The string should be casted to an int and then a float and returns each separately
 
+    # ------ Place code below here \/ \/ \/ ------
+
+
+    # ------ Place code above here /\ /\ /\ ------
+
     return int_s, float_s
 
-# ------ Place code above here /\ /\ /\ ------
 
 def exercise09():
     # Compile a list of 11 random URLs of dog pics. You will simply APPEND the dogs list with URLs of pics so that the list contains 11 URLs. This means you will extract the URL and insert into the list dogs.
@@ -125,9 +129,9 @@ def exercise09():
     url = 'https://random.dog/woof.json'
     dog_media = r.get(url=url)
     print(str(dog_media.content))
-    
+
     # ------ Place code below here \/ \/ \/ ------
-    
+
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -140,7 +144,7 @@ def exercise10(sentence):
     reversed = ''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -156,7 +160,7 @@ class TestAssignment2(unittest.TestCase):
         self.assertTrue('cat' in a)
         self.assertTrue('dog' in a)
         self.assertTrue('manta ray' in a)
-    
+
     def test_exercise02(self):
         print('Testing exercise 2')
         a, l = exercise02()
@@ -214,14 +218,14 @@ class TestAssignment2(unittest.TestCase):
         self.assertTrue(exercise07([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == False)
         self.assertTrue(exercise07([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10]) == True)
         self.assertTrue(exercise07([1, 2.00002, 2.00001, 4, 5, 6, 7, 8, 9, 10]) == False)
-    
+
     def test_exercise09(self):
         print('Testing exercise 9')
         dogs = exercise09()
         for d in dogs:
             print(d)
         self.assertTrue('https://random.dog/' in d)
-            
+
 
     def test_exercise10(self):
         print('Testing exercise 10')
