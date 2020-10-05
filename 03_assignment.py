@@ -46,7 +46,26 @@ def exercise01():
     '''
 
     # ------ Place code below here \/ \/ \/ ------
-
+    class BankAccount:
+        def __init__(self, bankname, firstname, lastname, balance=0):
+            self.firstname = firstname
+            self.lastname = lastname
+            self.bankname = bankname
+            self.balance = balance
+            
+        def deposit(self, amount):
+            self.balance += amount
+            return amount
+        
+        def withdrawal(self, amount):
+            if self.balance - amount > 0:
+                self.balance -= amount
+                return amount
+            else:
+                return 'Your withdrawal amount is exceeds your account limit!'
+            
+        def __str__(self):
+            print(f"{self.first} {self.last} bankaccount in {self.bankname} has balance {self.balance}")
 
 
 
@@ -85,7 +104,63 @@ def exercise02():
 '''
 
     # ------ Place code below here \/ \/ \/ ------
+    class Box:
+        def __init__(self, length, width):
+            self.length = length
+            self.width = width
+    
+        def render(self):
+            print('*' * self.width)
+        
+        
+        def invert(self):
+            self.length, self.width = self.width, self.length
+        
+        def get_area(self):
+            return self.length * self.width
+            
+        def get_perimeter(self):
+            return 2*(self.length + self.width)
+        
+        def double(self):
+            self.length = 2 * self.length
+            self.width = 2 * self.width 
+            return 
+    
+        def __eq__(self, another):
+            return self.length == another.length and self.width == another.width
+    
+        def print_dim(self):
+            print(f"length = {self.length}")
+            print(f"width = {self.width}")
 
+
+        def get_dim(self):
+            return (self.length, self.width)
+    
+        def combine (self,another):
+            self.length = self.length + another.length
+            self.width = self.width + another.width
+        
+
+    box1 = Box(5,10)
+    box2 = Box(3,4)
+    box3 = Box(5,10)
+
+    box1.print_dim()     
+    box2.print_dim() 
+    box3.print_dim()      
+        
+    box1.__eq__(box2)
+    box1.__eq__(box3)
+
+    box1.combine(box3)
+ 
+    box2.double()
+ 
+    box2.combine(box1)
+
+    print(box2.get_dim())
 
 
 
@@ -106,7 +181,9 @@ def exercise03():
     '''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+    url = "https://www.kaggle.com/neuromusic/avocado-prices/home?select=avocado.csv"
+    data = pd.read_csv(url,sep =',')
+    data.describe()    
     
     
     # ------ Place code above here /\ /\ /\ ------
