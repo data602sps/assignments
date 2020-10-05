@@ -22,7 +22,7 @@ def exercise01():
     # Create a list called animals containing the following animals: cat, dog, crouching tiger, hidden dragon, manta ray
 
     # ------ Place code below here \/ \/ \/ ------
-
+    animals = ['cat','dog','crouching tiger', 'hidden dragon', 'manta ray']
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -33,7 +33,10 @@ def exercise02():
     # Repeat exercise 1 and loop through and print each item in the animal list by iterating through an index number and using range(). Set the variable len_animals to the length of the animal list.
 
     # ------ Place code below here \/ \/ \/ ------
-
+    animals = ['cat','dog','crouching tiger', 'hidden dragon', 'manta ray']
+    len_animals = len(animals)
+    for i in range(len_animals):
+        print(animals[i])    
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -49,7 +52,9 @@ def exercise03():
     the_fifth_element = -999
 
     # ------ Place code below here \/ \/ \/ ------
-
+    countdown.sort()
+    countdown.reverse()
+    the_fifth_element = countdown[4]
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -72,7 +77,25 @@ def exercise04(more_temperatures, iot_sensor_points, a, b, c, d, e):
     copy_of_samples = []
 
     # ------ Place code below here \/ \/ \/ ------
+    temperatures.extend(more_temperatures)
 
+    value = iot_sensor_points.values()
+    temperatures.extend(value)
+
+    temperatures.append(a)
+    temperatures.append(b)
+    temperatures.append(c)
+    temperatures.append(d)
+    temperatures.append(e)
+
+    temperatures.sort()
+    temperatures.reverse()
+
+    samples = temperatures[4::5]
+
+    copy_of_samples = list(samples)
+
+    samples.sort()
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -84,8 +107,10 @@ def exercise05(n):
     # This function will find n factorial using recursion (calling itself) and return the solution. For example exercise05(5) will return 120. No Python functions are to be used.
 
     # ------ Place code below here \/ \/ \/ ------
-
-    pass # Remove this line
+    if n == 1:
+        return 1
+    else:
+        return n * exercise05(n-1)
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -94,7 +119,9 @@ def exercise06(n):
      # This function will receive an arbitrary list of numbers of arbitrary size and find the average of those numbers. The size of the list may vary. Find the method that requires the  least amount of code. Return back the length, sum of list and average of list
 
     # ------ Place code below here \/ \/ \/ ------
-
+    length_n=len(n)
+    sum_n=sum(n)
+    average_n=sum_n/length_n
 
     # ------ Place code above here /\ /\ /\ ------
     return length_n, sum_n, average_n
@@ -104,7 +131,7 @@ def exercise07(n):
     # This function looks for duplicates in list n. If there is a duplicate True is returned. If there are no duplicates False is returned.
 
     # ------ Place code below here \/ \/ \/ ------
-
+    return len(n) == len(set(n))
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -113,7 +140,8 @@ def exercise07(n):
 
 def exercise08(s):
     # This function receives a string. The string should be casted to an int and then a float and returns each separately
-
+    int_s = int(s)
+    float_S = float(int_S)
     return int_s, float_s
 
 # ------ Place code above here /\ /\ /\ ------
@@ -128,7 +156,9 @@ def exercise09():
     
     # ------ Place code below here \/ \/ \/ ------
     
-
+    for n in range(0,10):
+        dogs.append(str(dog_media.content))
+        dog_media=r.get(url=url)
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -140,7 +170,12 @@ def exercise10(sentence):
     reversed = ''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+    reversed_seq = sentence[::-1]
+    case_change = reversed_seq.swapcase()
+    for i in case_change[1:]:
+      case_change += '-' + i
+      
+    reversed = case_change    
 
 
     # ------ Place code above here /\ /\ /\ ------
