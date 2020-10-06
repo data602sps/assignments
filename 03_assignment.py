@@ -182,7 +182,7 @@ def exercise03():
 
     # ------ Place code below here \/ \/ \/ ------
     url = "https://www.kaggle.com/neuromusic/avocado-prices/home?select=avocado.csv"
-    data = pd.read_csv(url,sep =',')
+    data = pd.read_csv(url, error_bad_lines=False)
     data.describe()    
     
     
