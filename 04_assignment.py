@@ -93,7 +93,7 @@ def exercise07(sd,m,s):
 
 def exercise08():
     '''
-    Load the CSV data from http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv into a DataFrame
+    Load the CSV data from https://tinyurl.com/y63q7okz into a DataFrame
     # Return the following items:
     - row_count - Total # of rows
     - avg_sq_ft - Average square feet across all transactions
