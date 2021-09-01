@@ -1,3 +1,16 @@
+'''
+Assignment #1
+1. Add / modify code ONLY between the marked areas (i.e. "Place code below")
+2. Run the associated test harness for a basic check on completeness. A successful run of the test cases does not guarantee accuracy or fulfillment of the requirements. Please do not submit your work if test cases fail.
+3. To run unit tests simply use the below command after filling in all of the code:
+    python 01_assignment.py
+  
+4. Unless explicitly stated, please do not import any additional libraries but feel free to use built-in Python packages
+5. Submissions must be a Python file and not a notebook file (i.e *.ipynb)
+6. Do not use global variables
+7. Make sure your work is committed to your master branch
+'''
+
 import math
 import unittest
 
