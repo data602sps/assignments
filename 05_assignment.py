@@ -1,14 +1,13 @@
 '''
-Assignment #4
+Assignment #5
 1. Add / modify code ONLY between the marked areas (i.e. "Place code below") 
 2. Run the associated test harness for a basic check on completeness. A successful run of the test cases does not guarantee accuracy or fulfillment of the requirements. Please do not submit your work if test cases fail.
 3. To run unit tests simply use the below command after filling in all of the code:
-    python 06_assignment.py
+    python 05_assignment.py
   
 4. Unless explicitly stated, please do not import any additional libraries but feel free to use built-in Python packages
 5. Submissions must be a Python file and not a notebook file (i.e *.ipynb)
 6. Do not use global variables
-7. Make sure your work is committed to your master branch
 '''
 
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
@@ -39,6 +38,7 @@ def exercise02(a):
     # The function exercise02() receives a Python list and converts it to an ndarray. Convert the list to a numpy ndarray called array.
 
     # ------ Place code below here \/ \/ \/ ------
+    
     
     # ------ Place code above here /\ /\ /\ ------
 
@@ -76,7 +76,6 @@ def exercise06(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
-
 
     # ------ Place code above here /\ /\ /\ ------
     return ones
@@ -178,7 +177,7 @@ def exercise15():
     return df
 
 
-class TestAssignment6(unittest.TestCase):
+class TestAssignment5(unittest.TestCase):
     def test_exercise15(self):
         print('Skipping exercise 15')
         df = exercise15()
