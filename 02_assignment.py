@@ -23,7 +23,7 @@ def exercise01():
 
     # ------ Place code below here \/ \/ \/ ------
 
-
+    animals = ['cat', 'dog', 'crouching tiger', 'hidden dragon', 'manta ray']
     # ------ Place code above here /\ /\ /\ ------
 
     return animals
@@ -33,7 +33,11 @@ def exercise02():
     # Repeat exercise 1 and loop through and print each item in the animal list by iterating through an index number and using range(). Set the variable len_animals to the length of the animal list.
 
     # ------ Place code below here \/ \/ \/ ------
-
+    animals = ['cat', 'dog', 'crouching tiger', 'hidden dragon', 'manta ray']
+    len_animals = len(animals)
+    
+    for i in range(len_animals):
+       print(i)
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -49,7 +53,9 @@ def exercise03():
     the_fifth_element = -999
 
     # ------ Place code below here \/ \/ \/ ------
+    countdown.sort(reverse=True)
 
+    the_fifth_element = countdown[4]
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -72,6 +78,30 @@ def exercise04(more_temperatures, iot_sensor_points, a, b, c, d, e):
     copy_of_samples = []
 
     # ------ Place code below here \/ \/ \/ ------
+    temperatures = np.append(temperatures, more_temperatures)  # 1
+
+    for i in iot_sensor_points.values():  # 2
+        temperatures = np.append(temperatures, i)
+
+    temperatures = np.append(temperatures, a)  # 3
+    temperatures = np.append(temperatures, b)  # 3
+    temperatures = np.append(temperatures, c)  # 3
+    temperatures = np.append(temperatures, d)  # 3
+    temperatures = np.append(temperatures, e)  # 3
+
+
+
+    temperatures = np.sort(temperatures)[::-1]  # 4
+
+    # 5
+    index = 4
+    while (index < len(temperatures)):
+        samples.append(temperatures[index])
+        index = index + 5
+
+    copy_of_samples = list(samples)  # 6
+
+    samples.sort()  # 7
 
 
 
@@ -85,7 +115,11 @@ def exercise05(n):
 
     # ------ Place code below here \/ \/ \/ ------
 
-    pass # Remove this line
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * exercise05(n - 1)
+
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -94,6 +128,9 @@ def exercise06(n):
      # This function will receive an arbitrary list of numbers of arbitrary size and find the average of those numbers. The size of the list may vary. Find the method that requires the  least amount of code. Return back the length, sum of list and average of list
 
     # ------ Place code below here \/ \/ \/ ------
+    length_n = len(n)
+    sum_n = np.sum(np.array(n))
+    average_n = sum_n / length_n
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -104,6 +141,11 @@ def exercise07(n):
     # This function looks for duplicates in list n. If there is a duplicate True is returned. If there are no duplicates False is returned.
 
     # ------ Place code below here \/ \/ \/ ------
+    for i in range(len(n)):
+        if n.count(i)>1:
+            return True
+
+    return False
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -113,6 +155,8 @@ def exercise07(n):
 
 def exercise08(s):
     # This function receives a string. The string should be casted to an int and then a float and returns each separately
+    int_s = int(s)
+    float_s = float(s)
 
     return int_s, float_s
 
@@ -128,6 +172,10 @@ def exercise09():
     
     # ------ Place code below here \/ \/ \/ ------
     
+    for i in range(11):
+        string_index = str(dog_media.content).find('https')
+        dogs.append(str(dog_media.content)[string_index: -3])
+        dog_media = r.get(url)
 
 
     # ------ Place code above here /\ /\ /\ ------
@@ -140,7 +188,16 @@ def exercise10(sentence):
     reversed = ''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+     for i in sentence[::-1]:
+        if i.isalpha():
+
+            if i.isupper():
+                reversed = reversed + i.lower()
+            else:
+                reversed = reversed + i.upper()
+        else:
+            reversed = reversed + "_"
+   
 
 
     # ------ Place code above here /\ /\ /\ ------
